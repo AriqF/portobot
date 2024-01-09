@@ -1,0 +1,90 @@
+{
+    "fullname": "Ariq Fachry Ramadhan",
+    "nickname": "Ariq",
+    "email": "ariqfachry2611@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ariqfachry/",
+    "overview": "Fresh graduated applied science in software engineering at Surabaya State University, Indonesia. I have set of experience in web development specialized in back end developments. I used to work in help of tools such as GitHub for collaboration and Notion to organize my work and schedule. In result, I able to finish my work ahead of schedule. Able to work individually or with team and able to communicate well. Looking forward for any opportunities and interesting projects",
+    "experience": [
+        {
+            "company": "Tokocrypto",
+            "employement_type": "Internship",
+            "role": "Backend Developer",
+            "start_date": "April 2022",
+            "end_date": "August 2022",
+            "descriptions": {
+                "achievements": [
+                    "Helped the company solve internal issues by developing the Asset Management System and Technology Portal Web Application as a backend developer in a different team",
+                    "Wrote understandable code and implemented a clean backend architecture using NestJS framework (Typescript)",
+                    "Created clean and well-managed API documentation using Postman and Swagger for team collaboration",
+                    "Worked with Agile and Scrum Methodologies, utilizing Jira Software to track project issues"
+                ],
+                "skills": [
+                    "NestJS",
+                    "Nextjs",
+                    "Agile Software Development",
+                    "Web Development"
+                ]
+            }
+        },
+        {
+            "company": "Nanobee",
+            "employement_type": "Part-Time",
+            "role": "Software Engineer",
+            "start_date": "December 2022",
+            "end_date": "December 2022",
+            "descriptions": {
+                "achievements": [
+                    "Helped the company by developing a Telegram bot using Typescript, Node.js, and Firebase Firestore"
+                ],
+                "skills": [
+                    "Typescript",
+                    "Firebase",
+                    "Cloud Firestore",
+                    "NodeJs"
+                ]
+            }
+        },
+        {
+            "company": "Untukmu.ai",
+            "employement_type": "Full-Time",
+            "role": "Junior Backend Developer",
+            "start_date": "June 2023",
+            "end_date": "Present"
+        }
+    ],
+    "education": [
+        {
+            "level": "Bachelor of Applied Science",
+            "school": "Universitas Negeri Surabaya",
+            "field_of_study": "Computer Science",
+            "start_date": "August 2022",
+            "end_date": "Jul 2023",
+            "grade": "GPA 3.81"
+        }
+    ],
+    "informal_education": [
+        {
+            "Organization": "Ruangguru",
+            "name": "Ruangguru Career Acceleration Program",
+            "program": "Backend Developer",
+            "start_date": "August 2022",
+            "end_date": "December 2022",
+            "descriptions": {
+                "achievements": [
+                    "Completed all courses given by Ruangguru with final GPA of 4,00",
+                    "Contributed to Ruangguru CAMP as a Mentor Assistant, aiding other students in learning and achieving excellent final GPA scores",
+                    "Gained experiences and knowledge in basic Backend Golang developments and unit testing"
+                ],
+                "skills": [
+                    "Agile Methodologies",
+                    "Software Engineering",
+                    "Golang",
+                    "PostgreSQL",
+                    "Google Cloud Platform (GCP)",
+                    "Software Deployment",
+                    "Unit Testing"
+                ]
+            }
+        }
+    ]
+}
