@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  giftbackend:
-    image: RikaAFRBot
+  rikabot:
+    image: rikabot
     build:
       context: .
       dockerfile: ./Dockerfile
