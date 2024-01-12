@@ -2,8 +2,9 @@
     "fullname": "Ariq Fachry Ramadhan",
     "nickname": "Ariq",
     "email": "ariqfachry2611@gmail.com",
+    "telegram": "@ariqfachry",
     "linkedin": "https://www.linkedin.com/in/ariqfachry/",
-    "overview": "Fresh graduated applied science in software engineering at Surabaya State University, Indonesia. I have set of experience in web development specialized in back end developments. I used to work in help of tools such as GitHub for collaboration and Notion to organize my work and schedule. In result, I able to finish my work ahead of schedule. Able to work individually or with team and able to communicate well. Looking forward for any opportunities and interesting projects",
+    "overview": "Recent graduate in Applied Science in Software Engineering from Surabaya State University, Indonesia, specializing in backend development with expertise in Nest.js, Redis, Docker, and GCP. Proficient in Jira and Asana for efficient issue tracking, ensuring tasks are completed ahead of schedule. Adaptable team player with strong communication skills, seeking opportunities to contribute to impactful projects and eager to excel in the field of software engineering.",
     "experience": [
         {
             "company": "Tokocrypto",
@@ -57,7 +58,8 @@
             "level": "Bachelor of Applied Science",
             "school": "Universitas Negeri Surabaya",
             "field_of_study": "Computer Science",
-            "start_date": "August 2022",
+            "title": "S.Tr.Kom",
+            "start_date": "August 2019",
             "end_date": "Jul 2023",
             "grade": "GPA 3.81"
         }
