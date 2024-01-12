@@ -19,7 +19,7 @@ bot.on('message', async (msg) => {
     try {
         const taskClassifier = await ChatCompletionBasic(TASK_CLASSIFICATION, msg.text)
         const classifier: ITaskClassifier = JSON.parse(taskClassifier.choices[0].message.content) satisfies ITaskClassifier;
-        console.log({ input: msg.text, classifier: classifier.classification })
+        console.log({ username: `${msg.chat.active_usernames}`, input: msg.text, classifier: classifier.classification })
 
         let finalChatCompletion: OpenAI.Chat.Completions.ChatCompletion;
         let finalResponse: string;
