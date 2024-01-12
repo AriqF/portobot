@@ -13,5 +13,5 @@ COPY package.json .
 RUN npm install --only=production
 
 COPY --from=build /app/build ./build
-
+EXPOSE 8080
 CMD npm run start
