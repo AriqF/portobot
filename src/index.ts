@@ -19,6 +19,7 @@ export const openai = new OpenAI({
 })
 
 bot.on('message', async (msg) => {
+    bot.sendChatAction(msg.chat.id, "typing")
     if (msg.text == undefined) {
         bot.sendMessage(msg.chat.id, BotStaticResponse.NoTextException)
         return;
