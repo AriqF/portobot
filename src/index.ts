@@ -4,8 +4,15 @@ import { PROMPT_BOT_CONTEXT, PROMPT_RESUME, PROMPT_GREETING, PROMPT_NOT_UNDERSTA
 import { ITaskClassifier } from "./global/type";
 import { ChatCompletionBasic } from "./utils/ai";
 import { BotStaticResponse } from "./global/static-response";
+import express from "express"
 
 require('dotenv').config();
+const app = express()
+
+app.listen(+process.env.PORT, () => {
+    console.log(`Server started on port ${process.env.PORT}`);
+})
+
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 export const openai = new OpenAI({
     apiKey: process.env.OPENAI_TOKEN
@@ -17,9 +24,10 @@ bot.on('message', async (msg) => {
         return;
     }
     try {
+        const username = msg.chat.active_usernames || msg.chat.first_name + " " + msg.chat.last_name
         const taskClassifier = await ChatCompletionBasic(TASK_CLASSIFICATION, msg.text)
         const classifier: ITaskClassifier = JSON.parse(taskClassifier.choices[0].message.content) satisfies ITaskClassifier;
-        console.log({ username: `${msg.chat.active_usernames}`, input: msg.text, classifier: classifier.classification })
+        console.log({ username, input: msg.text, classifier: classifier.classification })
 
         let finalChatCompletion: OpenAI.Chat.Completions.ChatCompletion;
         let finalResponse: string;
@@ -57,4 +65,3 @@ bot.on('message', async (msg) => {
     }
 
 })
-console.log("Project is running");
