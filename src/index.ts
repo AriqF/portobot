@@ -9,12 +9,7 @@ import express from "express"
 require('dotenv').config();
 const app = express()
 
-
-app.get('/', (req, res) => {
-    res.send("Hello Rika!")
-})
-
-const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: false });
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 export const openai = new OpenAI({
     apiKey: process.env.OPENAI_TOKEN
 })
@@ -66,6 +61,10 @@ bot.on('message', async (msg) => {
         bot.sendMessage(msg.chat.id, BotStaticResponse.CatchException)
     }
 
+})
+
+app.get('/', (req, res) => {
+    res.send("Hello Rika!")
 })
 
 app.listen(+process.env.PORT, () => {
