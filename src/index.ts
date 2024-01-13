@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send("Hello Rika!")
 })
 
-const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: false });
 export const openai = new OpenAI({
     apiKey: process.env.OPENAI_TOKEN
 })
