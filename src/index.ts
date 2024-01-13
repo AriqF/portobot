@@ -9,8 +9,9 @@ import express from "express"
 require('dotenv').config();
 const app = express()
 
-app.listen(+process.env.PORT, () => {
-    console.log(`Server started on port ${process.env.PORT}`);
+
+app.get('/', (req, res) => {
+    res.send("Hello Rika!")
 })
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
@@ -65,4 +66,8 @@ bot.on('message', async (msg) => {
         bot.sendMessage(msg.chat.id, BotStaticResponse.CatchException)
     }
 
+})
+
+app.listen(+process.env.PORT, () => {
+    console.log(`Server started on port ${process.env.PORT}`);
 })
