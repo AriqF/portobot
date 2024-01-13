@@ -1,17 +1,23 @@
-FROM node:16.20.1-alpine as build
+# Use the official Node.js image with the desired version
+FROM node:20
 
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
+
+# Copy the rest of the application code to the working directory
 COPY . .
+
+# Build TypeScript code
 RUN npm run build
 
-FROM node:20.10.0-alpine
-
-WORKDIR /app
-COPY package.json .
-RUN npm install --only=production
-
-COPY --from=build /app/build ./build
+# Expose the port that the application will run on
 EXPOSE 8080
-CMD npm run start
+
+# Run the application
+CMD [ "node", "build/index.js" ]
