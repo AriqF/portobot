@@ -1,6 +1,6 @@
 import TelegramBot from "node-telegram-bot-api";
 import OpenAI from "openai";
-import { PROMPT_BOT_CONTEXT, PROMPT_RESUME, PROMPT_GREETING, PROMPT_NOT_UNDERSTAND, PROMPT_OUT_CONTEXT, TASK_CLASSIFICATION } from "./global/prompt";
+import { PROMPT_BOT_CONTEXT, PROMPT_RESUME, PROMPT_GREETING, PROMPT_NOT_UNDERSTAND, PROMPT_OUT_CONTEXT, TASK_CLASSIFICATION, BotTaskClassification, PROMPT_ASKING_LANGUAGE } from "./global/prompt";
 import { ITaskClassifier } from "./global/type";
 import { ChatCompletionBasic } from "./utils/ai";
 import { BotStaticResponse } from "./global/static-response";
@@ -30,34 +30,39 @@ bot.on('message', async (msg) => {
         let finalResponse: string;
         bot.sendChatAction(msg.chat.id, "typing")
         switch (classifier.classification) {
-            case 'greeting':
+            case BotTaskClassification.GREETING:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_GREETING, msg.text)
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
-            case 'ask_resume_info':
+            case BotTaskClassification.ASK_RESUME:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_RESUME, msg.text)
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
-            case 'asking_out_of_context':
+            case BotTaskClassification.OUT_OF_CONTEXT:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_OUT_CONTEXT, msg.text)
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
-            case 'asking_about_bot_context':
+            case BotTaskClassification.BOT_CONTEXT:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_BOT_CONTEXT, msg.text)
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
-            case 'unknown_queries':
+            case BotTaskClassification.ASK_LANGUAGE:
+                finalChatCompletion = await ChatCompletionBasic(PROMPT_ASKING_LANGUAGE, msg.text)
+                finalResponse = finalChatCompletion.choices[0].message.content;
+                break;
+            case BotTaskClassification.UNKNOWN_QUERIES:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_NOT_UNDERSTAND, msg.text)
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
             default:
-                finalResponse = "I'm sorry, I just having an internal trouble. Can you repeat again?"
+                finalResponse = BotStaticResponse.InternalTrouble;
                 break;
         }
 
         console.log({ usage: finalChatCompletion.usage, response: finalResponse })
         bot.sendMessage(msg.chat.id, finalResponse)
     } catch (error) {
+        console.error(error);
         bot.sendMessage(msg.chat.id, BotStaticResponse.CatchException)
     }
 
