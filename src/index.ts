@@ -3,7 +3,7 @@ import OpenAI from "openai";
 import { PROMPT_BOT_CONTEXT, PROMPT_RESUME, PROMPT_GREETING, PROMPT_NOT_UNDERSTAND, PROMPT_OUT_CONTEXT, TASK_CLASSIFICATION, BotTaskClassification, PROMPT_ASKING_LANGUAGE } from "./global/prompt";
 import { ITaskClassifier } from "./global/type";
 import { ChatCompletionBasic } from "./utils/ai";
-import { BotStaticResponse } from "./global/static-response";
+import { BotException, BotStaticResponse, getBotGreeting, getBotStaticResponse } from "./global/static-response";
 import express from "express"
 
 require('dotenv').config();
@@ -17,7 +17,7 @@ export const openai = new OpenAI({
 bot.on('message', async (msg) => {
     bot.sendChatAction(msg.chat.id, "typing")
     if (msg.text == undefined) {
-        bot.sendMessage(msg.chat.id, BotStaticResponse.NoTextException)
+        bot.sendMessage(msg.chat.id, getBotStaticResponse(BotException.NoTextException))
         return;
     }
     try {
@@ -31,8 +31,9 @@ bot.on('message', async (msg) => {
         bot.sendChatAction(msg.chat.id, "typing")
         switch (classifier.classification) {
             case BotTaskClassification.GREETING:
-                finalChatCompletion = await ChatCompletionBasic(PROMPT_GREETING, msg.text)
-                finalResponse = finalChatCompletion.choices[0].message.content;
+                // finalChatCompletion = await ChatCompletionBasic(PROMPT_GREETING, msg.text)
+                // finalResponse = finalChatCompletion.choices[0].message.content;
+                finalResponse = getBotGreeting();
                 break;
             case BotTaskClassification.ASK_RESUME:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_RESUME, msg.text)
@@ -55,15 +56,16 @@ bot.on('message', async (msg) => {
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
             default:
-                finalResponse = BotStaticResponse.InternalTrouble;
+                finalResponse = getBotStaticResponse(BotException.InternalTrouble);
                 break;
         }
 
-        console.log({ usage: finalChatCompletion.usage, response: finalResponse })
-        bot.sendMessage(msg.chat.id, finalResponse)
+        // console.log({ usage: finalChatCompletion.usage || null, response: finalResponse })
+        console.log({ response: finalResponse });
+        bot.sendMessage(msg.chat.id, finalResponse);
     } catch (error) {
         console.error(error);
-        bot.sendMessage(msg.chat.id, BotStaticResponse.CatchException)
+        bot.sendMessage(msg.chat.id, getBotStaticResponse(BotException.CatchException))
     }
 
 })

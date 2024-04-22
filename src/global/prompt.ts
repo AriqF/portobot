@@ -7,7 +7,8 @@ export enum BotTaskClassification {
     OUT_OF_CONTEXT = "asking_out_of_context",
     BOT_CONTEXT = "asking_about_bot_context",
     UNKNOWN_QUERIES = "unknown_queries",
-    ASK_LANGUAGE = "asking_language"
+    ASK_LANGUAGE = "asking_language",
+    ASK_ROMANCE = "asking_romance"
 }
 // export const SYSTEM_MAIN_TASK = `You're a woman assistant to help a person to explain about his/her resume based on the data provided. `
 // export const PROTECTION = `If the user is asking a question other than the resume or any resume related information, 
@@ -43,10 +44,11 @@ Additional Instructions:
 ${Object.values(BotTaskClassification).join(", ")}
 - Here is several classification data you can use for classification: 
     Begin classification data:
-    - If the user asks about the resume data or any worker's related, 'ask_resume_info' is the best classification.
-    - If you don't understand what the user input is, 'unknown_queries' will be the best classification.
-    - If the user asks about you or bot related, 'asking_about_bot_context' is best.
-    - If the user asking for you to speak in a certain language, 'asking_language' will be the most match.
+    - If the user asks about the resume data or any worker's related, '${BotTaskClassification.ASK_RESUME}' is the best classification.
+    - If you don't understand what the user input is, '${BotTaskClassification.UNKNOWN_QUERIES}' will be the best classification.
+    - If the user asks about you or bot related, '${BotTaskClassification.BOT_CONTEXT}' is best.
+    - If the user asking for you to speak in a certain language, '${BotTaskClassification.ASK_LANGUAGE}' will be the most match.
+    - If the user asking about {worker's} love relationship, '${BotTaskClassification.ASK_ROMANCE}' will be the best match.
     End of classification data:
 - After that you have to response only with the following JSON format:
 \nBegin JSON Format:\n

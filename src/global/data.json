@@ -19,9 +19,10 @@
                     "Created clean and well-managed API documentation using Postman and Swagger for team collaboration",
                     "Worked with Agile and Scrum Methodologies, utilizing Jira Software to track project issues"
                 ],
-                "skills": [
+                "skills_used": [
                     "NestJS",
-                    "Nextjs",
+                    "Typescript",
+                    "NodeJs",
                     "Agile Software Development",
                     "Web Development"
                 ]
@@ -37,7 +38,7 @@
                 "achievements": [
                     "Helped the company by developing a Telegram bot using Typescript, Node.js, and Firebase Firestore"
                 ],
-                "skills": [
+                "skills_used": [
                     "Typescript",
                     "Firebase",
                     "Cloud Firestore",
@@ -46,11 +47,22 @@
             }
         },
         {
-            "company": "Untukmu.ai",
+            "company": "Untukmu.AI",
             "employement_type": "Full-Time",
             "role": "Junior Backend Developer",
             "start_date": "June 2023",
-            "end_date": "Present"
+            "end_date": "Present",
+            "descriptions": {
+                "summary": "Currently working and handling Untukmu.AI core business such as handling user's transactions, order's shipment, Untukmu.AI's internal and merchant admin panel. Also working closely with AI team to deliver best AI gifting experience to the end users and merchants",
+                "skills_used": [
+                    "NestJS",
+                    "Typescript",
+                    "Redis",
+                    "Memcache",
+                    "NodeJs",
+                    "Google Cloud Platform (GCP): CloudRun, CloudSQL, Compute Engine, Cloud Bucket (OSS)"
+                ]
+            }
         }
     ],
     "education": [
@@ -87,6 +99,76 @@
                     "Unit Testing"
                 ]
             }
+        }
+    ],
+    "skills": {
+        "software_engineering_related": {
+            "programming_language": [
+                {
+                    "name": "Javascript / Typescript",
+                    "level": "Advanced",
+                    "note": "Language I used in daily basis for about 3 years"
+                },
+                {
+                    "name": "Golang",
+                    "level": "Intermediate",
+                    "note": "Still exploring and mastering"
+                },
+                {
+                    "name": "Python",
+                    "level": "Beginner",
+                    "note": "Still exploring and mastering, had a few projects for Data analytics"
+                },
+                {
+                    "name": "C#",
+                    "level": "Intermediate",
+                    "note": "Had a 2 game projects that use Unity C#"
+                }
+            ]
+        }
+    },
+    "projects": [
+        {
+            "title": "GenPieBot",
+            "description": "GenPieBot is a Telegram bot that will help the user to fetch their genshin impact in-game profile data. User can inspect the data such as their nickname, adventure rank, world level, statistic of showcased characters and more. This personal project developed using Typescript NodeJs.",
+            "year": 2022,
+            "project_type": "Personal"
+        },
+        {
+            "title": "TRAST - Technology Request Administration System in Tokocrypto",
+            "description": "TRAST is a web based application aimed for managing requests from outside tech departments in Tokocrypto to the tech departments. Requests that can be requested in this application such as: Creating a new system, bug fixing, application improvement, and others tech related things. This application developed using NextJs for the frontend, NestJs for the backend, and MySQL for the database. Within this project, i took the role as backend developer",
+            "year": 2022,
+            "project_type": "Internship Project"
+        },
+        {
+            "title": "TAMI - Tokocrypto Asset Management Inventory (2022)",
+            "description": "Web based application aimed for managing assets including its activites such as propose asset, repair an asset, returning assets from employee, and acquisitioning assets. Developed using NextJs for the frontend, NestJs for the backend, and MySQL for the database. In this project team, i took the role as backend developer.",
+            "year": 2022,
+            "project_type": "Internship Project"
+        },
+        {
+            "title": "Lara Tales",
+            "description": "Lara Tales is an Action 2D Platformer game and consist several stages with enemy and bosses. This game is developed using Unity Engine. In this project i took the role as the main programmer while my team consist of story writer, and area designer.",
+            "year": 2021,
+            "project_type": "Internship Project"
+        },
+        {
+            "title": "Spotify Wrapped Twitter Analytics",
+            "description": "Big data Analysis on Most Tagged Artist in Spotify Wrapped Indonesia 2021. Analyzed by retrieving tweets uploaded on Twitter with the hashtag of SpotifyWrappedIndonesia and analyzed using Pyhton and Google Collab as a python notebook.",
+            "year": 2021,
+            "project_type": "Individual College Project"
+        },
+        {
+            "title": "ManGo",
+            "description": "A website for all users to learn and study Japanese basic level. Provide learn materials and quizzes. Created using Laravel and MySQL as Database. I took the role as frontend developer using Bootstrap as CSS Framework.",
+            "year": 2021,
+            "project_type": "Team College Project"
+        },
+        {
+            "title": "RingkasNet",
+            "description": "Ringkas.Net is a kind of a website to write and share people's thought. This website is created using native php and MySQL as database. I took the role as frontend developer using Bootstrap as CSS Framework.",
+            "year": 2021,
+            "project_type": "Team College Project"
         }
     ]
 }
