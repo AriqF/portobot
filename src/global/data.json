@@ -4,7 +4,7 @@
     "email": "ariqfachry2611@gmail.com",
     "telegram": "@ariqfachry",
     "linkedin": "https://www.linkedin.com/in/ariqfachry/",
-    "overview": "Recent graduate in Applied Science in Software Engineering from Surabaya State University, Indonesia, specializing in backend development with expertise in Nest.js, Redis, Docker, and GCP. Proficient in Jira and Asana for efficient issue tracking, ensuring tasks are completed ahead of schedule. Adaptable team player with strong communication skills, seeking opportunities to contribute to impactful projects and eager to excel in the field of software engineering.",
+    "overview": "Graduated in Applied Science in Software Engineering from Surabaya State University, Indonesia, specializing in backend development with set of experiences in Nest.js, Typescript, and GCP. Adept at team collaboration and communication, seeking opportunities to contribute to impactful projects and eager to excel in the field of software engineering. Passionate to share knowledge and helping others grow.",
     "experience": [
         {
             "company": "Tokocrypto",
@@ -54,6 +54,12 @@
             "end_date": "Present",
             "descriptions": {
                 "summary": "Currently working and handling Untukmu.AI core business such as handling user's transactions, order's shipment, Untukmu.AI's internal and merchant admin panel. Also working closely with AI team to deliver best AI gifting experience to the end users and merchants",
+                "achievements": [
+                    "Helped 20K+ gifters to find special gift by successfully implemented and integrated AI Chatbot into Untukmu.AI's core system.",
+                    "Succesfully refactored transactions and logistic shipment flows and modules to improves the codes Readability, Maintainability, and Scalability. Also implemented some caching strategy, resulting improvement on related APIs latency by 5% faster than before",
+                    "Helped Untukmu.AI's merchants to be able manage and track their orders by continously giving improvments and updates into the Untukmu.AI's merchant admin panels",
+                    "Succesfully implemented various feature to help Untukmu.AI's internal team to market, sales, and financial reporting. Also improved some Untukmu.AI internal feature APIs by implementing queueing and caching resulting decreased latency over 20%."
+                ],
                 "skills_used": [
                     "NestJS",
                     "Typescript",
@@ -70,7 +76,7 @@
             "level": "Bachelor of Applied Science",
             "school": "Universitas Negeri Surabaya",
             "field_of_study": "Computer Science",
-            "title": "S.Tr.Kom",
+            "title": "S.Tr.Kom / BASc",
             "start_date": "August 2019",
             "end_date": "Jul 2023",
             "grade": "GPA 3.81"
@@ -111,7 +117,7 @@
                 },
                 {
                     "name": "Golang",
-                    "level": "Intermediate",
+                    "level": "Beginner",
                     "note": "Still exploring and mastering"
                 },
                 {
@@ -129,46 +135,102 @@
     },
     "projects": [
         {
+            "title": "Pofits - Personal Finance Web App",
+            "description": "Discover Pofits, a personal finance management app designed to transform the way you budget and save. Experience the power of envelope budgeting strategy, seamlessly integrated with advanced expense and income category modules. Users can also set financial goals and let the system guide you every step of the way, tracking your progress towards savings and investment milestones.",
+            "year": 2022,
+            "project_type": "College Thesis Product (Individual Project)",
+            "technologies_used": [
+                "Nest.Js",
+                "Typescript",
+                "MySQL",
+                "Next.Js",
+                "Docker",
+                "Ubuntu VPS",
+                "Vercel"
+            ]
+        },
+        {
             "title": "GenPieBot",
             "description": "GenPieBot is a Telegram bot that will help the user to fetch their genshin impact in-game profile data. User can inspect the data such as their nickname, adventure rank, world level, statistic of showcased characters and more. This personal project developed using Typescript NodeJs.",
             "year": 2022,
-            "project_type": "Personal"
+            "project_type": "Personal",
+            "technologies_used": [
+                "Node",
+                "MySQL",
+                "Next.Js",
+                "Ubuntu VPS",
+                "Vercel"
+            ]
         },
         {
             "title": "TRAST - Technology Request Administration System in Tokocrypto",
             "description": "TRAST is a web based application aimed for managing requests from outside tech departments in Tokocrypto to the tech departments. Requests that can be requested in this application such as: Creating a new system, bug fixing, application improvement, and others tech related things. This application developed using NextJs for the frontend, NestJs for the backend, and MySQL for the database. Within this project, i took the role as backend developer",
             "year": 2022,
-            "project_type": "Internship Project"
+            "project_type": "Internship Project",
+            "technologies_used": [
+                "Nest.Js",
+                "Typescript",
+                "MySQL",
+                "Swagger",
+                "AliOSS"
+            ]
         },
         {
             "title": "TAMI - Tokocrypto Asset Management Inventory (2022)",
             "description": "Web based application aimed for managing assets including its activites such as propose asset, repair an asset, returning assets from employee, and acquisitioning assets. Developed using NextJs for the frontend, NestJs for the backend, and MySQL for the database. In this project team, i took the role as backend developer.",
             "year": 2022,
-            "project_type": "Internship Project"
+            "project_type": "Internship Project",
+            "technologies_used": [
+                "Nest.Js",
+                "Typescript",
+                "MySQL",
+                "Swagger",
+                "AliOSS"
+            ]
         },
         {
             "title": "Lara Tales",
             "description": "Lara Tales is an Action 2D Platformer game and consist several stages with enemy and bosses. This game is developed using Unity Engine. In this project i took the role as the main programmer while my team consist of story writer, and area designer.",
             "year": 2021,
-            "project_type": "Internship Project"
+            "project_type": "Team College Project",
+            "technologies_used": [
+                "Unity 2D",
+                "C#"
+            ]
         },
         {
             "title": "Spotify Wrapped Twitter Analytics",
             "description": "Big data Analysis on Most Tagged Artist in Spotify Wrapped Indonesia 2021. Analyzed by retrieving tweets uploaded on Twitter with the hashtag of SpotifyWrappedIndonesia and analyzed using Pyhton and Google Collab as a python notebook.",
             "year": 2021,
-            "project_type": "Individual College Project"
+            "project_type": "Individual College Project",
+            "technologies_used": [
+                "Python",
+                "Google Collab"
+            ]
         },
         {
             "title": "ManGo",
             "description": "A website for all users to learn and study Japanese basic level. Provide learn materials and quizzes. Created using Laravel and MySQL as Database. I took the role as frontend developer using Bootstrap as CSS Framework.",
             "year": 2021,
-            "project_type": "Team College Project"
+            "project_type": "Team College Project",
+            "technologies_used": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Bootstrap"
+            ]
         },
         {
             "title": "RingkasNet",
             "description": "Ringkas.Net is a kind of a website to write and share people's thought. This website is created using native php and MySQL as database. I took the role as frontend developer using Bootstrap as CSS Framework.",
             "year": 2021,
-            "project_type": "Team College Project"
+            "project_type": "Team College Project",
+            "technologies_used": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Bootstrap"
+            ]
         }
     ]
 }
