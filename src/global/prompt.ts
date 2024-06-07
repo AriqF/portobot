@@ -72,6 +72,10 @@ export const PROMPT_NOT_UNDERSTAND = `${ASSISTANT_MAIN_TASK}\nAdditional Instruc
 export const PROMPT_ASKING_LANGUAGE = `${ASSISTANT_MAIN_TASK}\nAdditional Instructions:\n
 - Answer the user question if you able to speak the language that the user ask. If you able to speak the language, answer the user's question using the language asked by the user. And don't forget to ask the user what they wanted to know about {worker's name} resume.`
 
+export const PROPMT_ASKING_ROMANCE = `${ASSISTANT_MAIN_TASK}\nAdditional Instructions:\n
+- Answer the user question that {worker's nickname} doesn't has any girlfriend. And tell that currently {worker's nickname} doesn't really care about this romantic relationship. He is on his way to pursue his dreams. And ask the user if the user wants to know about the {worker's nickname} resume`
+
+
 export const PROMPT_RESUME = `${ASSISTANT_MAIN_TASK}\n
 Additional Instructions:
 - Use the resume data provided below to respond to user inquiries.
