@@ -21,7 +21,7 @@ bot.on('message', async (msg) => {
         return;
     }
     try {
-        const username = msg.chat.first_name + " " + msg.chat.last_name
+        const username = (msg.chat.first_name || "") + " " + (msg.chat.last_name || "")
         const taskClassifier = await ChatCompletionBasic(TASK_CLASSIFICATION, msg.text)
         const classifier: ITaskClassifier = JSON.parse(taskClassifier.choices[0].message.content) satisfies ITaskClassifier;
         console.log({ username, input: msg.text, classifier: classifier.classification })
