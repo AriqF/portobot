@@ -1,6 +1,6 @@
 import TelegramBot from "node-telegram-bot-api";
 import OpenAI from "openai";
-import { PROMPT_BOT_CONTEXT, PROMPT_RESUME, PROMPT_GREETING, PROMPT_NOT_UNDERSTAND, PROMPT_OUT_CONTEXT, TASK_CLASSIFICATION, BotTaskClassification, PROMPT_ASKING_LANGUAGE, PROPMT_ASKING_ROMANCE } from "./global/prompt";
+import { PROMPT_BOT_CONTEXT, PROMPT_RESUME, PROMPT_GREETING, PROMPT_NOT_UNDERSTAND, PROMPT_OUT_CONTEXT, TASK_CLASSIFICATION, BotTaskClassification, PROMPT_ASKING_LANGUAGE } from "./global/prompt";
 import { ITaskClassifier } from "./global/type";
 import { ChatCompletionBasic } from "./utils/ai";
 import { BotException, BotStaticResponse, getBotGreeting, getBotStaticResponse } from "./global/static-response";
@@ -49,10 +49,6 @@ bot.on('message', async (msg) => {
                 break;
             case BotTaskClassification.ASK_LANGUAGE:
                 finalChatCompletion = await ChatCompletionBasic(PROMPT_ASKING_LANGUAGE, msg.text)
-                finalResponse = finalChatCompletion.choices[0].message.content;
-                break;
-            case BotTaskClassification.ASK_ROMANCE:
-                finalChatCompletion = await ChatCompletionBasic(PROPMT_ASKING_ROMANCE, msg.text)
                 finalResponse = finalChatCompletion.choices[0].message.content;
                 break;
             case BotTaskClassification.UNKNOWN_QUERIES:

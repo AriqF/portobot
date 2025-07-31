@@ -5,7 +5,7 @@
     "email": "ariqfachry2611@gmail.com",
     "telegram": "@ariqfachry",
     "linkedin": "https://www.linkedin.com/in/ariqfachry/",
-    "overview": "Graduated in Applied Science in Software Engineering from Surabaya State University, Indonesia, specializing in backend development with set of experiences in Nest.js, Typescript, and GCP. Adept at team collaboration and communication, seeking opportunities to contribute to impactful projects and eager to excel in the field of software engineering. Passionate to share knowledge and helping others grow.",
+    "overview": "Backend Engineer with 2+ years of experience building scalable web services using NestJS, TypeScript, and GCP as primary cloud infrastructure. Strong foundation in system design, API development, caching strategies, and production deployment using Cloud Run. Recently explored AI Engineering through hands-on project implementations with LLM APIs, LangChain, and FastAPI. Comfortable working in Agile teams, passionate about developer growth, and eager to contribute to impactful and user-centric products. ",
     "experience": [
         {
             "company": "Tokocrypto",
@@ -106,7 +106,29 @@
                     "Unit Testing"
                 ]
             }
-        }
+        },
+        [
+            {
+                "organization": "Ruangguru",
+                "name": "AI Mastering Program ",
+                "program": "AI Engineering",
+                "start_date": "March 2025",
+                "end_date": "June 2025",
+                "descriptions": {
+                    "achievements": [
+                        "Completed a comprehensive program covering practical topics in machine learning, computer vision, and large language models (LLMs).",
+                        "Individually developed an AI-powered self-improvement chatbot deployed on Telegram Bot, using FastAPI for backend integration via webhook while core functionalities are implemented with LangChain and OpenAI. Including several agent-based prompting and tool usage. Utilized MongoDB for conversational memory storage. As well integrated HuggingFace models for daily mood analysis."
+                    ],
+                    "skills": [
+                        "Python",
+                        "FastAPI",
+                        "LangChain",
+                        "OpenAI",
+                        "MongoDB"
+                    ]
+                }
+            }
+        ]
     ],
     "skills": {
         "software_engineering_related": {
@@ -131,13 +153,116 @@
                     "level": "Intermediate",
                     "note": "Had a 2 game projects that use Unity C#"
                 }
+            ],
+            "frameworks": [
+                {
+                    "name": "NestJS",
+                    "level": "Advanced",
+                    "note": "Main framework used in daily work and projects"
+                },
+                {
+                    "name": "Next.js",
+                    "level": "Intermediate",
+                    "note": "Used in several fullstack projects and internship work"
+                },
+                {
+                    "name": "FastAPI",
+                    "level": "Beginner",
+                    "note": "Used in AI-integrated chatbot project"
+                }
+            ],
+            "databases": [
+                {
+                    "name": "MySQL",
+                    "level": "Intermediate",
+                    "note": "Used in several major projects"
+                },
+                {
+                    "name": "MongoDB",
+                    "level": "Intermediate",
+                    "note": "Used in AI chatbot project"
+                },
+                {
+                    "name": "Cloud Firestore",
+                    "level": "Beginner",
+                    "note": "Used in Telegram bot project at Nanobee"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "level": "Beginner",
+                    "note": null
+                }
+            ],
+            "cloud_platforms": [
+                {
+                    "name": "Google Cloud Platform (GCP)",
+                    "level": "Intermediate",
+                    "note": "Used CloudRun, CloudSQL, Cloud Bucket, Compute Engine"
+                }
+            ],
+            "devops_tools": [
+                {
+                    "name": "Docker",
+                    "level": "Intermediate",
+                    "note": "Used for containerization in projects like Pofits, and several company projects"
+                },
+                {
+                    "name": "Vercel",
+                    "level": "Beginner",
+                    "note": "Used for frontend deployment in personal projects"
+                }
+            ],
+            "monitoring_and_testing": [
+                {
+                    "name": "k6",
+                    "level": "Beginner",
+                    "note": "Used for performance testing in production APIs"
+                },
+                {
+                    "name": "Swagger",
+                    "level": "Advanced",
+                    "note": "Used for API documentation and collaboration"
+                }
+            ],
+            "other_technologies": [
+                {
+                    "name": "Redis",
+                    "level": "Intermediate",
+                    "note": "Used for caching strategies in production"
+                },
+                {
+                    "name": "Unity 2D",
+                    "level": "Intermediate",
+                    "note": "Used in game development for Lara Tales"
+                }
+            ],
+            "methodologies": [
+                {
+                    "name": "Agile & Scrum",
+                    "level": "Intermediate",
+                    "note": "Used in daily collaboration and project management with Jira"
+                }
             ]
         }
     },
     "projects": [
         {
+            "title": "Rune AI - Telegram Productivity Chatbot",
+            "description": "Telegram-based AI chatbot that helps users achieve long-term goals through gamified daily task tracking. Rune AI enables goal breakdown into daily objectives, supports reflective journaling with sentiment analysis, and delivers personalized encouragement using OpenAI LLM and HuggingFace classifiers.",
+            "year": 2024,
+            "project_type": "Personal Project",
+            "technologies_used": [
+                "Python",
+                "FastAPI",
+                "MongoDB",
+                "OpenAI GPT",
+                "HuggingFace Transformers",
+                "Telegram Bot API"
+            ]
+        },
+        {
             "title": "Pofits - Personal Finance Web App",
-            "description": "Discover Pofits, a personal finance management app designed to transform the way you budget and save. Experience the power of envelope budgeting strategy, seamlessly integrated with advanced expense and income category modules. Users can also set financial goals and let the system guide you every step of the way, tracking your progress towards savings and investment milestones.",
+            "description": "Personal finance management app designed to transform the way you budget and save. Experience the power of envelope budgeting strategy, seamlessly integrated with advanced expense and income category modules. Users can also set financial goals and let the system guide you every step of the way, tracking your progress towards savings and investment milestones.",
             "year": 2022,
             "project_type": "College Thesis Product (Individual Project)",
             "technologies_used": [
@@ -207,30 +332,6 @@
             "technologies_used": [
                 "Python",
                 "Google Collab"
-            ]
-        },
-        {
-            "title": "ManGo",
-            "description": "A website for all users to learn and study Japanese basic level. Provide learn materials and quizzes. Created using Laravel and MySQL as Database. I took the role as frontend developer using Bootstrap as CSS Framework.",
-            "year": 2021,
-            "project_type": "Team College Project",
-            "technologies_used": [
-                "PHP",
-                "Laravel",
-                "MySQL",
-                "Bootstrap"
-            ]
-        },
-        {
-            "title": "RingkasNet",
-            "description": "Ringkas.Net is a kind of a website to write and share people's thought. This website is created using native php and MySQL as database. I took the role as frontend developer using Bootstrap as CSS Framework.",
-            "year": 2021,
-            "project_type": "Team College Project",
-            "technologies_used": [
-                "PHP",
-                "Laravel",
-                "MySQL",
-                "Bootstrap"
             ]
         }
     ]

@@ -6,8 +6,7 @@ export enum BotTaskClassification {
     OUT_OF_CONTEXT = "asking_out_of_context",
     BOT_CONTEXT = "asking_about_bot_context",
     UNKNOWN_QUERIES = "unknown_queries",
-    ASK_LANGUAGE = "asking_language",
-    ASK_ROMANCE = "asking_romance"
+    ASK_LANGUAGE = "asking_language"
 }
 
 export const DEV_RESUME = `==========\nBegin resume data:\n${devdata}\n==========\nEnd of data`;
@@ -41,7 +40,6 @@ ${Object.values(BotTaskClassification).join(", ")}
     - If you don't understand what the user input is, '${BotTaskClassification.UNKNOWN_QUERIES}' will be the best classification.
     - If the user asks about you or bot related, '${BotTaskClassification.BOT_CONTEXT}' is best.
     - If the user asking for you to speak in a certain language, '${BotTaskClassification.ASK_LANGUAGE}' will be the most match.
-    - If the user asking about${Devdata.fullname}'s love relationship, '${BotTaskClassification.ASK_ROMANCE}' will be the best match.
     End of classification data:
 - After that you have to response only with the following JSON format:
 \nBegin JSON Format:\n
@@ -64,10 +62,6 @@ export const PROMPT_NOT_UNDERSTAND = `${ASSISTANT_MAIN_TASK}\nAdditional Instruc
 
 export const PROMPT_ASKING_LANGUAGE = `${ASSISTANT_MAIN_TASK}\nAdditional Instructions:\n
 - Answer the user question if you able to speak the language that the user ask. If you able to speak the language, answer the user's question using the language asked by the user. And don't forget to ask the user what they wanted to know about ${Devdata.fullname}'s resume.`
-
-export const PROPMT_ASKING_ROMANCE = `${ASSISTANT_MAIN_TASK}\nAdditional Instructions:\n
-- Answer the user question based on the user's query. But remember that ${Devdata.fullname}'s doesn't has any girlfriend. And tell that currently ${Devdata.fullname} doesn't really care about this romantic relationship. He is on his way to pursue his dreams. And ask the user if the user wants to know about the ${Devdata.fullname}'s resume`
-
 
 export const PROMPT_RESUME = `${ASSISTANT_MAIN_TASK}\n
 Additional Instructions:
