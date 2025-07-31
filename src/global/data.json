@@ -54,12 +54,13 @@
             "start_date": "June 2023",
             "end_date": "Present",
             "descriptions": {
-                "summary": "Currently working and handling Untukmu.AI core business such as handling user's transactions, order's shipment, Untukmu.AI's internal and merchant admin panel. Also working closely with AI team to deliver best AI gifting experience to the end users and merchants",
+                "summary": "Experienced in building scalable backend systems using NestJS and FastAPI, with strong focus on performance optimization, caching, and system reliability. Contributed to AI-driven product development and large-scale gamification initiatives with millions of users. Proficient in modern backend stacks and GCP infrastructure, with hands-on experience deploying microservices and collaborating in fast-paced, cross-functional startup teams.",
                 "achievements": [
-                    "Helped 20K+ gifters to find special gift by successfully implemented and integrated AI Chatbot into Untukmu.AI's core system.",
-                    "Succesfully refactored transactions and logistic shipment flows and modules to improves the codes Readability, Maintainability, and Scalability. Also implemented some caching strategy, resulting improvement on related APIs latency by 5% faster than before",
-                    "Helped Untukmu.AI's merchants to be able manage and track their orders by continously giving improvments and updates into the Untukmu.AI's merchant admin panels",
-                    "Succesfully implemented various feature to help Untukmu.AI's internal team to market, sales, and financial reporting. Also improved some Untukmu.AI internal feature APIs by implementing queueing and caching resulting decreased latency over 20%."
+                    "Built and refined NestJS-based backend systems for key operational modules such as orders, logistics, and merchants. Boosted API performance by implementing Redis caching and validating improvements using K6 performance testing.",
+                    "Built and collaborated on the prototype of an AI-powered chatbot using FastAPI and OpenAI LLM, aimed at personalized gift recommendations. Integrated SerpAPI and Blibli’s product data to enrich gift suggestions, resulting in over 20,000+ active users.",
+                    "Developed backend systems for platform gamification supporting the ForU AI token airdrop in Telegram Miniapp, serving a user base of over 8 million users.",
+                    "Worked across a modern stack including PostgreSQL, MySQL, Redis, ClickHouse, and GCP for deployment infrastructure. Frequently initiated and configured Cloud Run services for new microservices and internal tools.",
+                    "Collaborated with cross-functional teams using Lark and adapted to a fast-paced startup environment focused on rapid delivery and scalability, while navigating limited formal testing or CI/CD infrastructure."
                 ],
                 "skills_used": [
                     "NestJS",
@@ -67,7 +68,9 @@
                     "Redis",
                     "Memcache",
                     "NodeJs",
-                    "Google Cloud Platform (GCP): CloudRun, CloudSQL, Compute Engine, Cloud Bucket (OSS)"
+                    "Google Cloud Platform (GCP): CloudRun, CloudSQL, Compute Engine, Cloud Bucket (OSS)",
+                    "PostgreSQL",
+                    "ClickHouse"
                 ]
             }
         }
